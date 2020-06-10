@@ -50,7 +50,7 @@ status_t FlexCAN_init_RXFIFO(void)
     /*-------------------------------- FlexCAN0 Startup  ----------------------------------*/
     PCC->PCC_FlexCAN0_b.CGC   = PCC_PCC_FlexCAN0_CGC_1; /* FlexCAN0 clock gating */
     CAN0->CAN0_MCR_b.MDIS     = CAN0_MCR_MDIS_1;        /* Disable FlexCAN module for clock source selection */
-    CAN0->CAN0_CTRL1_b.CLKSRC = CAN0_CTRL1_CLKSRC_0;    /* Select SYS_CLK as source (80Mhz)*/
+    CAN0->CAN0_CTRL1_b.CLKSRC = CAN0_CTRL1_CLKSRC_0;    /* Select SOSCDIV2 as source (8Mhz)*/
     CAN0->CAN0_MCR_b.MDIS     = CAN0_MCR_MDIS_0;        /* Enable FlexCAN peripheral */
     CAN0->CAN0_MCR_b.HALT     = CAN0_MCR_HALT_1;        /* Request freeze mode eBtry */
     CAN0->CAN0_MCR_b.FRZ      = CAN0_MCR_FRZ_1;
